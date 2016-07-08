@@ -9,7 +9,17 @@ $(document).ready(function(){
 			}
 		});
 		$("#cat-menu-wrap").toggle();
-		
+	});
+	
+	
+	$(window).on("scroll", function(){
+		if ( $(window).scrollTop() > 221 ) {
+			$("#site-menu").addClass('fixed');
+			$("body").css('margin-top', 36);
+		} else {
+			$("#site-menu").removeClass('fixed');
+			$("body").css('margin-top', 0);
+		}
 	});
 });
 
