@@ -1,0 +1,2 @@
+Телефон: +7(909)263-85-66
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1167.1038780971962!2d37.612685958229335!3d54.19410539504134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4134407f80d7d00b%3A0x2e5ca859c74aa704!2z0YPQuy4g0KHQvtCy0LXRgtGB0LrQsNGPLCAzMSwg0KLRg9C70LAsINCi0YPQu9GM0YHQutCw0Y8g0L7QsdC7LiwgMzAwMDQx!5e0!3m2!1sru!2sru!4v1467735734794" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>

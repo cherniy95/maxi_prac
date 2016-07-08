@@ -1,0 +1,288 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* STYLE */
+
+.clear {
+	display: table;
+	clear: both;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 15px;
+	border: none;
+	text-decoration: none;
+	background-color: #e0e0e0;
+	color: #000;
+	cursor: pointer;
+	outline: none;
+}
+
+.btn.btn-green {
+	background-color: #00B060;
+	color: #fff;
+	border-radius: 3px;
+}
+
+body {
+	background-color: #e0e0e0;
+	font-family: 'Verdana', sans-serif;
+}
+
+.wrap {
+	background-color: #fff;
+	width: 1170px;
+	margin: 0 auto;
+	box-shadow: 0 0 10px 0 #3F3F3F;
+	-moz-box-shadow: 0 0 10px 0 #3F3F3F;
+	-webkit-box-shadow: 0 0 10px 0 #3F3F3F;
+}
+
+.header {
+	background: url('/images/header.jpg');
+	height: 221px;
+}
+
+.hello-message {
+	position: relative;
+	top: 100px;
+	left: 25px;
+	font-size: 20px;
+}
+
+/* MENU */
+
+.site-menu {
+	font-size: 0;
+	background-color: #086FA1;
+	box-shadow: inset 0 5px 5px -5px #3F3F3F;
+}
+
+.site-menu li {
+	font-size: 16px;
+	display: inline-block;
+}
+
+.site-menu li a {
+	display: block;
+	padding: 10px 15px;
+	text-decoration: none;
+	color: #fff;
+}
+
+.site-menu li a:hover {
+	background-color: #034769;
+}
+
+/* MAIN */
+
+.main-wrap {
+	padding: 10px 15px;
+}
+
+.l-bar, 
+.content {
+	float: left;
+	padding-right: 15px;
+}
+
+.r-bar {
+	float: right;
+}
+
+.content {
+	width: 710px;
+}
+
+.l-bar,
+.r-bar {
+	width: 200px;
+}
+
+/* POST */
+
+.post-image-wrap,
+.post-details {
+	width: 50%;
+	float: left;
+}
+
+.post-image {
+	width: 250px;
+}
+
+/*.post-image:hover {
+	transform: scale(2, 2);
+	transition-duration: 0.5s;
+}*/
+
+.post-title {
+	font-size: 20px;
+}
+
+.post-price {
+	display: block;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.post-details .btn {
+	margin-top: 15px;
+}
+
+/* L-BAR */
+
+.cat-menu-wrap {
+	display: none;
+}
+
+.btn-cat-menu {
+	padding: 10px 15px;
+	width: 200px;
+	background-color: #A62D00;
+	border: none;
+	font-size: 16px;
+	color: #fff;
+	text-align: left;
+	cursor: pointer;
+	outline: none;
+}
+
+.cat-menu {
+	background-color: #FF4500;
+}
+
+.cat-menu li a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 15px;
+}
+
+.cat-menu li a:hover {
+	background-color: #FF7340;
+}
+
+/* R-BAR */
+
+.btn-brand-menu {
+	padding: 10px 15px;
+	background-color: #A62D00;
+	border: none;
+	font-size: 16px;
+	color: #fff;
+	text-align: left;
+	outline: none;
+}
+
+/* FOOTER */
+
+.footer {
+	padding: 10px 15px;
+	background-color: #3CA0D0;
+}
+
+/* POPUP */
+
+.overlay {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.65);
+	position: fixed;
+	cursor: default;
+}
+
+.overlay:target {
+	display: block;
+}
+
+.popup {
+	top: -100%;
+	right: 0;
+	left: 50%;
+	font-size: 14px;
+	z-index: 20;
+	margin: 0;
+	width: 60%;
+	position: fixed;
+	padding: 15px;
+	border: 1px solid #383838;
+	background: #fefefe;
+	border-radius: 5px;
+}
+
+.overlay:target+.popup {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    top: 20%;
+}
+
+.popup-form input {
+	min-height: 25px;
+	border: 1px solid #e0e0e0;
+	outline: none;
+}
+
+.submit-wrap,
+.input-wrap {
+	text-align: center;
+}
+
+.popup-form .btn {
+	margin-top: 15px;
+}
