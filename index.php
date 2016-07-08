@@ -19,7 +19,7 @@
 				</span>
 			</div>
 			<ul class="site-menu">
-				<li><a href="http://maxip.com">Главная</a></li>
+				<li><a href="http://<?= $_SERVER['HTTP_HOST'] ?>">Главная</a></li>
 				<li><a href="?page=about">О себе</a></li>
 				<li><a href="?page=contacts">Контакты</a></li>
 				<li><a href="?page=tests">Тесты</a></li>
@@ -33,27 +33,7 @@
 			</div>
 			<div class="content">
 				<?php 
-					if ( isset($_GET['page']) ) {
-						switch ($_GET['page']) {
-							case 'about':
-								include 'about.php';
-								break;
-							case 'contacts':
-								include 'contacts.php';
-								break;
-							case 'tests':
-								include 'tests.php';
-								break;
-							case 'shop':
-								include 'shop.php';
-								break;
-							default:
-								echo "<p>Задание по практике</p>";
-								break;
-						}
-					} else {
-						echo "<p>Задание по практике</p>";
-					}
+					pageSwitcher( 'page', "<p>Задание по практике</p>" );
 				?>
 			</div>
 			<div class="r-bar">

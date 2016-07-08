@@ -1,4 +1,29 @@
 <?php
+function pageSwitcher( $switcher, $default_message )
+{
+	if ( isset($_GET[$switcher]) ) {
+		switch ($_GET[$switcher]) {
+			case 'about':
+				include 'about.php';
+				break;
+			case 'contacts':
+				include 'contacts.php';
+				break;
+			case 'tests':
+				include 'tests.php';
+				break;
+			case 'shop':
+				include 'shop.php';
+				break;
+			default:
+				echo "<p>Задание по практике</p>";
+				break;
+		}
+	} else {
+		echo $default_message;
+	}
+}
+
 function printForm()
 {
 	echo "
@@ -133,21 +158,6 @@ function getBrandMenu()
 {
 	global $connect;
 
-	// if ( isset($_GET['page']) && isset($_GET['id']) ) {
-	// 	if ( isset($_GET['product_id']) ) {
-
-	// 	} else {
-	// 		$sql = "
-	// 			SELECT DISTINCT b.id, b.name AS brand FROM product p
-	// 			INNER JOIN brands b ON p.brand = b.id
-	// 			WHERE p.category = {$_GET['id']}
-	// 		";
-	// 		$result = $connect->query($sql);
-	// 	}
-	// } else {
-	// 	$result = $connect->query("SELECT * FROM brands");
-	// }
-
 	if ( isset($_GET['page']) ) {
 		if ( $_GET['page'] == 'shop' ) {
 			if ( isset($_GET['type']) ) {
@@ -187,7 +197,6 @@ function printBrandMenu()
 	echo "<ul class='cat-menu'>";
 
 	$brands = getBrandMenu();
-	//?page=shop&type=brand-list&id=4
 	for ($i = 0; $i < count($brands); $i++) {
 		echo "<li><a href=\"?page=shop&type=brand-list&id=" . $brands[$i][0] . "\">" . $brands[$i][1] . "</a></li>";
 	}
