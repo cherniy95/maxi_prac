@@ -1,7 +1,7 @@
 <?php
 
 if ( isset($_GET['page']) && isset($_GET['type']) ) {
-
+	
 	switch ($_GET['type']) {
 		case 'cat-list':
 			printCatList();

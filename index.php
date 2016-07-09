@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title><?= $site_name ?></title>
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://yastatic.net/jquery/2.2.3/jquery.min.js"></script>
 	<script src="js/zoomsl-3.0.js"></script>
@@ -18,11 +18,11 @@
 					Практическое задание
 				</span>
 			</div>
-			<ul class="site-menu">
+			<ul class="site-menu" id="site-menu">
 				<li><a href="http://<?= $_SERVER['HTTP_HOST'] ?>">Главная</a></li>
 				<li><a href="?page=about">О себе</a></li>
 				<li><a href="?page=contacts">Контакты</a></li>
-				<li><a href="?page=tests">Тесты</a></li>
+				<li><a href="?page=tests">Инициализация</a></li>
 			</ul>
 		</div>
 		<div class="main-wrap">

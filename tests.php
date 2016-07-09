@@ -1,5 +1,6 @@
 <?php if ( isset($_POST['submit']) ): ?>
 	<?php
+		global $connect;
 		$connect->query("DROP TABLE IF EXISTS product, category, brands");
 
 		$sql = "
@@ -85,11 +86,12 @@
 				");
 		}
 
-		echo "Успешно!";
+		echo "<p>Успешно!</p>";
 	?>
 <?php else: ?>
 	<form action="" method="POST">
 		<p>Выполнить инициализацию?</p>
-		<input type="submit" name="submit" value="Да">
+		<p>Скрипт загрузит файл .csv, удалит (если есть) и создаст необходимые таблицы в базе данных. Импортирует данные из файла в созданные таблицы.</p>
+		<input type="submit" class="btn btn-green" name="submit" value="Да">
 	</form>
 <?php endif; ?>

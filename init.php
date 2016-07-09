@@ -7,3 +7,4 @@ ini_set('display_startup_errors', 1);
 $connect = new mysqli('localhost', 'root', 'Degenerator1995', 'prac2');
 $connect->set_charset('utf8');
 
+$site_name = "Интернет магазин";

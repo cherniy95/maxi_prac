@@ -146,7 +146,7 @@ function printBrandList()
 
 		echo "<ul>";
 		while ($row = $products->fetch_assoc()) {
-			echo "<li><a href=\"?page=shop&product_id=" . $row['id'] . "\">" . $row['name'] . ' - ' . $row['brand'] . '</a></li><br>';
+			echo "<li><a href=\"?page=shop&type=item&id=" . $row['id'] . "\">" . $row['name'] . ' - ' . $row['brand'] . '</a></li><br>';
 		}
 		echo "</ul>";
 	} else {
